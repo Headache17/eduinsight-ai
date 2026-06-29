@@ -1,24 +1,14 @@
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
-import { tokenStore } from '@/lib/api/client'
-import type { User } from '@/types'
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 interface AuthState {
-  user: User | null; isAuthenticated: boolean;
-  setAuth: (user: User, accessToken: string) => void;
-  logout: () => void;
+  user: any | null; accessToken: string | null; tenantId: string | null;
+  setAuth: (user: any, token: string, tenant: string) => void;
+  clearAuth: () => void;
 }
 
-export const useAuthStore = create<AuthState>()(
-  persist((set) => ({
-    user: null, isAuthenticated: false,
-    setAuth: (user, accessToken) => {
-      tokenStore.set(accessToken); set({ user, isAuthenticated: true });
-    },
-    logout: () => {
-      tokenStore.clear(); set({ user: null, isAuthenticated: false });
-    },
-  }),
-  { name: 'eduinsight-auth', partialize: (s) => ({ user: s.user, isAuthenticated: s.isAuthenticated }) }
-)
-)
+export const useAuthStore = create<AuthState>()(persist((set) => ({
+  user: null, accessToken: null, tenantId: null,
+  setAuth: (user, token, tenant) => set({ user, accessToken: token, tenantId: tenant }),
+  clearAuth: () => set({ user: null, accessToken: null, tenantId: null }),
+}), { name: 'eduinsight-auth' })));
