@@ -13,11 +13,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .logo{padding:18px 16px 14px;border-bottom:1px solid #e8e7e3}
 .logo-mark{display:flex;align-items:center;gap:9px}
 .logo-icon{width:32px;height:32px;background:#534AB7;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px}
-.logo-name{font-size:13px;font-weight:600;color:#1a1a18}
-.logo-sub{font-size:10px;color:#999;margin-top:1px}
+.logo-name{font-size:13px;font-weight:600}.logo-sub{font-size:10px;color:#999;margin-top:1px}
 .school-info{padding:10px 14px;border-bottom:1px solid #e8e7e3;background:#fafaf8}
-.school-name{font-size:11px;font-weight:600}
-.user-role{font-size:10px;color:#999;margin-top:2px}
+.school-name{font-size:11px;font-weight:600}.user-role{font-size:10px;color:#999;margin-top:2px}
 nav{flex:1;padding:8px 6px}
 .nav-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:13px;color:#666;margin-bottom:2px;transition:all .15s;user-select:none}
 .nav-item:hover{background:#f0efeb;color:#1a1a18}
@@ -27,8 +25,7 @@ nav{flex:1;padding:8px 6px}
 .sidebar-footer{padding:10px;border-top:1px solid #e8e7e3}
 .user-row{display:flex;align-items:center;gap:8px;padding:6px 4px}
 .avatar{width:30px;height:30px;border-radius:50%;background:#EEEDFE;color:#534AB7;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center}
-.user-name{font-size:12px;font-weight:600}
-.user-email{font-size:10px;color:#999}
+.user-name{font-size:12px;font-weight:600}.user-email{font-size:10px;color:#999}
 .main{flex:1;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .topbar{background:#fff;border-bottom:1px solid #e8e7e3;padding:0 24px;height:54px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .page-title{font-size:16px;font-weight:600}
@@ -59,8 +56,7 @@ tr:hover td{background:#fafaf8}
 .score-fill{height:100%;border-radius:3px;position:absolute;left:0;top:0}
 .insight-card{background:#fafaf8;border-left:3px solid #534AB7;border-radius:0 8px 8px 0;padding:12px 14px;margin-bottom:10px}
 .insight-type{font-size:10px;font-weight:700;color:#534AB7;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
-.insight-text{color:#555;line-height:1.55;font-size:13px}
-.insight-meta{font-size:11px;color:#999;margin-top:5px}
+.insight-text{color:#555;line-height:1.55;font-size:13px}.insight-meta{font-size:11px;color:#999;margin-top:5px}
 .chip{padding:5px 13px;border:1px solid #e8e7e3;border-radius:20px;font-size:12px;cursor:pointer;background:#fff;color:#666;font-family:inherit;font-weight:500}
 .chip.active{background:#EEEDFE;border-color:#AFA9EC;color:#534AB7}
 .search-box{padding:8px 12px;border:1px solid #e8e7e3;border-radius:8px;font-size:13px;font-family:inherit;flex:1;min-width:160px}
@@ -70,8 +66,7 @@ tr:hover td{background:#fafaf8}
 .notif-item.unread{background:#fffdf8}
 .notif-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
 .notif-title{font-size:13px;font-weight:600;margin-bottom:3px}
-.notif-desc{font-size:12px;color:#666;line-height:1.45}
-.notif-time{font-size:11px;color:#999;margin-top:4px}
+.notif-desc{font-size:12px;color:#666;line-height:1.45}.notif-time{font-size:11px;color:#999;margin-top:4px}
 .unread-dot{width:8px;height:8px;background:#534AB7;border-radius:50%;margin-top:5px;flex-shrink:0}
 .marks-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .m-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
@@ -95,29 +90,29 @@ tr:hover td{background:#fafaf8}
 <div class="app">
 <aside class="sidebar">
 <div class="logo"><div class="logo-mark"><div class="logo-icon"><i class="ti ti-brain"></i></div><div><div class="logo-name">EduInsight AI</div><div class="logo-sub">AI Platform</div></div></div></div>
-<div class="school-info"><div class="school-name">Greenwood International School</div><div class="user-role">School Admin &middot; 2024&ndash;25</div></div>
-<nav>
-<div class="nav-item active" onclick="go('dashboard',this)"><i class="ti ti-layout-dashboard"></i> Dashboard</div>
-<div class="nav-item" onclick="go('students',this)"><i class="ti ti-users"></i> Students</div>
-<div class="nav-item" onclick="go('marks',this)"><i class="ti ti-pencil"></i> Marks entry</div>
-<div class="nav-item" onclick="go('attendance',this)"><i class="ti ti-calendar-check"></i> Attendance</div>
-<div class="nav-item" onclick="go('analytics',this)"><i class="ti ti-chart-bar"></i> Analytics</div>
-<div class="nav-item" onclick="go('notifications',this)"><i class="ti ti-bell"></i> Alerts <span class="badge" id="badge">4</span></div>
+<div class="school-info"><div class="school-name">Greenwood International School</div><div class="user-role">School Admin 2024-25</div></div>
+<nav id="snav">
+<div class="nav-item active" data-page="dashboard"><i class="ti ti-layout-dashboard"></i> Dashboard</div>
+<div class="nav-item" data-page="students"><i class="ti ti-users"></i> Students</div>
+<div class="nav-item" data-page="marks"><i class="ti ti-pencil"></i> Marks entry</div>
+<div class="nav-item" data-page="attendance"><i class="ti ti-calendar-check"></i> Attendance</div>
+<div class="nav-item" data-page="analytics"><i class="ti ti-chart-bar"></i> Analytics</div>
+<div class="nav-item" data-page="notifications"><i class="ti ti-bell"></i> Alerts <span class="badge" id="badge">4</span></div>
 </nav>
 <div class="sidebar-footer"><div class="user-row"><div class="avatar">AD</div><div><div class="user-name">Admin User</div><div class="user-email">admin@greenwood.edu</div></div></div></div>
 </aside>
 <div class="main">
-<div class="topbar"><div class="page-title" id="ph">Dashboard</div><div class="topbar-right"><button class="btn" onclick="toast('Data refreshed!')"><i class="ti ti-refresh"></i> Refresh</button><button class="btn btn-primary" onclick="toast('Report queued!')"><i class="ti ti-file-text"></i> Generate report</button></div></div>
+<div class="topbar"><div class="page-title" id="ph">Dashboard</div><div class="topbar-right"><button class="btn" id="btn-refresh"><i class="ti ti-refresh"></i> Refresh</button><button class="btn btn-primary" id="btn-report"><i class="ti ti-file-text"></i> Generate report</button></div></div>
 <div class="content">
 <div id="p-dashboard" class="page active">
 <div class="stat-grid">
-<div class="stat-card"><div class="stat-label">Total students</div><div class="stat-value">200</div><div class="stat-delta up">&uarr; 12 from last year</div></div>
-<div class="stat-card"><div class="stat-label">At risk</div><div class="stat-value" style="color:#A32D2D">23</div><div class="stat-delta dn">&uarr; 5 this week</div></div>
+<div class="stat-card"><div class="stat-label">Total students</div><div class="stat-value">200</div><div class="stat-delta up">12 from last year</div></div>
+<div class="stat-card"><div class="stat-label">At risk</div><div class="stat-value" style="color:#A32D2D">23</div><div class="stat-delta dn">5 this week</div></div>
 <div class="stat-card"><div class="stat-label">Avg attendance</div><div class="stat-value">87.4%</div><div class="stat-delta">This month</div></div>
 <div class="stat-card"><div class="stat-label">Marks submitted</div><div class="stat-value">64%</div><div class="stat-delta">Unit Test 2</div></div>
 </div>
 <div class="two-col">
-<div class="card"><div class="card-header"><span class="card-title">At-risk students</span><button class="btn" style="font-size:12px;padding:4px 10px" onclick="go('students',document.querySelectorAll('.nav-item')[1])">View all</button></div>
+<div class="card"><div class="card-header"><span class="card-title">At-risk students</span><button class="btn" style="font-size:12px;padding:4px 10px" id="btn-view-all">View all</button></div>
 <table><thead><tr><th>Student</th><th>Class</th><th>Risk</th><th>Score</th></tr></thead><tbody>
 <tr><td><strong>Priya Sharma</strong></td><td>10-A</td><td><span class="risk-badge r-CRITICAL">Critical</span></td><td><span class="score-bar"><span class="score-fill" style="width:82%;background:#E24B4A"></span></span> 82</td></tr>
 <tr><td><strong>Arjun Mehta</strong></td><td>10-B</td><td><span class="risk-badge r-HIGH">High</span></td><td><span class="score-bar"><span class="score-fill" style="width:67%;background:#EF9F27"></span></span> 67</td></tr>
@@ -126,12 +121,12 @@ tr:hover td{background:#fafaf8}
 <tr><td><strong>Kavya Nair</strong></td><td>9-A</td><td><span class="risk-badge r-MEDIUM">Medium</span></td><td><span class="score-bar"><span class="score-fill" style="width:38%;background:#639922"></span></span> 38</td></tr>
 </tbody></table></div>
 <div class="card"><div class="card-header"><span class="card-title">AI insights</span></div><div style="padding:14px 16px">
-<div class="insight-card"><div class="insight-type"><i class="ti ti-alert-triangle" style="font-size:11px"></i> Attendance risk</div><div class="insight-text">Priya Sharma's attendance dropped to 58% &mdash; below 75% threshold. Consistent absences on Mondays suggest a pattern.</div><div class="insight-meta">2 hours ago &middot; Confidence 92%</div></div>
-<div class="insight-card" style="border-color:#3B6D11"><div class="insight-type" style="color:#3B6D11"><i class="ti ti-trending-up" style="font-size:11px"></i> Improvement signal</div><div class="insight-text">Rohan Gupta improved maths from 34% to 61% between Unit Test 1 and 2. Acknowledge progress to sustain momentum.</div><div class="insight-meta">5 hours ago &middot; Confidence 88%</div></div>
-<div class="insight-card" style="border-color:#854F0B"><div class="insight-type" style="color:#854F0B"><i class="ti ti-brain" style="font-size:11px"></i> Class-level risk</div><div class="insight-text">Class 10-B Science avg (44%) is significantly below school avg (67%). Consider additional sessions.</div><div class="insight-meta">Yesterday &middot; Confidence 79%</div></div>
+<div class="insight-card"><div class="insight-type"><i class="ti ti-alert-triangle" style="font-size:11px"></i> Attendance risk</div><div class="insight-text">Priya Sharma attendance dropped to 58% - below 75% threshold. Consistent absences on Mondays suggest a pattern.</div><div class="insight-meta">2 hours ago - Confidence 92%</div></div>
+<div class="insight-card" style="border-color:#3B6D11"><div class="insight-type" style="color:#3B6D11"><i class="ti ti-trending-up" style="font-size:11px"></i> Improvement signal</div><div class="insight-text">Rohan Gupta improved maths from 34% to 61% between Unit Test 1 and 2. Acknowledge progress to sustain momentum.</div><div class="insight-meta">5 hours ago - Confidence 88%</div></div>
+<div class="insight-card" style="border-color:#854F0B"><div class="insight-type" style="color:#854F0B"><i class="ti ti-brain" style="font-size:11px"></i> Class-level risk</div><div class="insight-text">Class 10-B Science avg (44%) is significantly below school avg (67%). Consider additional sessions.</div><div class="insight-meta">Yesterday - Confidence 79%</div></div>
 </div></div>
 </div>
-<div class="card"><div class="card-header"><span class="card-title">Marks entry progress &mdash; Unit Test 2</span></div>
+<div class="card"><div class="card-header"><span class="card-title">Marks entry progress - Unit Test 2</span></div>
 <table><thead><tr><th>Subject</th><th>Section</th><th>Teacher</th><th>Progress</th><th>Status</th></tr></thead><tbody>
 <tr><td>Mathematics</td><td>10-A</td><td>Mrs. Reddy</td><td><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:100%;background:#3B6D11"></div></div><span style="font-size:11px;color:#999">40/40</span></div></td><td><span class="risk-badge r-MEDIUM" style="background:#EAF3DE;color:#3B6D11">Verified</span></td></tr>
 <tr><td>Science</td><td>10-B</td><td>Mr. Kumar</td><td><div class="progress-wrap"><div class="progress-track"><div class="progress-fill" style="width:75%;background:#EF9F27"></div></div><span style="font-size:11px;color:#999">30/40</span></div></td><td><span class="risk-badge r-HIGH">In progress</span></td></tr>
@@ -140,53 +135,184 @@ tr:hover td{background:#fafaf8}
 </tbody></table></div>
 </div>
 <div id="p-students" class="page">
-<div class="filter-row"><input class="search-box" placeholder="Search by name or student code&hellip;" oninput="filterStu(this.value)"><button class="chip active" onclick="setRisk('all',this)">All 200</button><button class="chip" onclick="setRisk('CRITICAL',this)">Critical 5</button><button class="chip" onclick="setRisk('HIGH',this)">High 18</button><button class="chip" onclick="setRisk('MEDIUM',this)">Medium 34</button><button class="chip" onclick="setRisk('LOW',this)">Low 143</button></div>
+<div class="filter-row"><input class="search-box" placeholder="Search by name or student code..." id="search-input"><button class="chip active" data-risk="all">All 200</button><button class="chip" data-risk="CRITICAL">Critical 5</button><button class="chip" data-risk="HIGH">High 18</button><button class="chip" data-risk="MEDIUM">Medium 34</button><button class="chip" data-risk="LOW">Low 143</button></div>
 <div class="card"><table><thead><tr><th>Code</th><th>Student</th><th>Section</th><th>Attendance</th><th>Avg marks</th><th>Risk level</th><th></th></tr></thead><tbody id="stu-body"></tbody></table></div>
 </div>
 <div id="p-marks" class="page">
-<div style="display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap"><select class="btn" style="font-size:13px"><option>Unit Test 2</option><option>Mid Term</option></select><select class="btn" style="font-size:13px"><option>Mathematics &mdash; 10-A</option><option>Science &mdash; 10-B</option></select><span style="margin-left:auto;font-size:12px;color:#999">Max marks: <strong>50</strong></span></div>
-<div class="card"><div class="card-header"><span class="card-title">Mathematics &mdash; Class 10-A <span style="color:#999;font-weight:400;font-size:12px">Draft</span></span><div style="display:flex;gap:8px"><button class="btn" onclick="toast('Draft saved!')">Save draft</button><button class="btn btn-primary" onclick="toast('Submitted for HOD review')">Submit for review</button></div></div><div style="padding:14px 18px" id="marks-list"></div></div>
+<div style="display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap"><select class="btn" style="font-size:13px"><option>Unit Test 2</option><option>Mid Term</option></select><select class="btn" style="font-size:13px"><option>Mathematics - 10-A</option><option>Science - 10-B</option></select><span style="margin-left:auto;font-size:12px;color:#999">Max marks: <strong>50</strong></span></div>
+<div class="card"><div class="card-header"><span class="card-title">Mathematics - Class 10-A (Draft)</span><div style="display:flex;gap:8px"><button class="btn" id="btn-save-draft">Save draft</button><button class="btn btn-primary" id="btn-submit-marks">Submit for review</button></div></div><div style="padding:14px 18px" id="marks-list"></div></div>
 </div>
 <div id="p-attendance" class="page">
-<div style="display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap"><select class="btn" style="font-size:13px"><option>Class 10-A (40 students)</option><option>Class 10-B</option><option>Class 9-A</option></select><input type="date" class="btn" style="font-size:13px" id="att-date"><button class="btn btn-primary" onclick="toast('Attendance saved!')"><i class="ti ti-check"></i> Submit</button></div>
+<div style="display:flex;gap:10px;margin-bottom:16px;align-items:center;flex-wrap:wrap"><select class="btn" style="font-size:13px"><option>Class 10-A (40 students)</option><option>Class 10-B</option><option>Class 9-A</option></select><input type="date" class="btn" style="font-size:13px" id="att-date"><button class="btn btn-primary" id="btn-submit-att"><i class="ti ti-check"></i> Submit attendance</button></div>
 <div class="card"><table><thead><tr><th>Roll</th><th>Student</th><th>Status</th><th>Remark</th></tr></thead><tbody id="att-body"></tbody></table></div>
 </div>
 <div id="p-analytics" class="page">
-<div class="stat-grid"><div class="stat-card"><div class="stat-label">School avg</div><div class="stat-value">67.2%</div><div class="stat-delta up">&uarr; 4.1% vs last exam</div></div><div class="stat-card"><div class="stat-label">Pass rate</div><div class="stat-value">83%</div><div class="stat-delta">166 of 200</div></div><div class="stat-card"><div class="stat-label">Top score</div><div class="stat-value">98%</div><div class="stat-delta">Ananya Roy &middot; 10-A</div></div><div class="stat-card"><div class="stat-label">Below 33%</div><div class="stat-value" style="color:#A32D2D">12</div><div class="stat-delta dn">Needs intervention</div></div></div>
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-label">School avg</div><div class="stat-value">67.2%</div><div class="stat-delta up">4.1% vs last exam</div></div>
+<div class="stat-card"><div class="stat-label">Pass rate</div><div class="stat-value">83%</div><div class="stat-delta">166 of 200</div></div>
+<div class="stat-card"><div class="stat-label">Top score</div><div class="stat-value">98%</div><div class="stat-delta">Ananya Roy - 10-A</div></div>
+<div class="stat-card"><div class="stat-label">Below 33%</div><div class="stat-value" style="color:#A32D2D">12</div><div class="stat-delta dn">Needs intervention</div></div>
+</div>
 <div class="two-col">
 <div class="card"><div class="card-header"><span class="card-title">Class performance</span></div><div style="padding:16px 18px 12px"><div class="bar-chart" id="bar-chart"></div></div></div>
 <div class="card"><div class="card-header"><span class="card-title">Subject-wise average</span></div><table><thead><tr><th>Subject</th><th>Avg</th><th>Pass rate</th></tr></thead><tbody><tr><td>English</td><td>76.8%</td><td>94%</td></tr><tr><td>Mathematics</td><td>71.4%</td><td>88%</td></tr><tr><td>Hindi</td><td>69.3%</td><td>87%</td></tr><tr><td>Social Studies</td><td>63.1%</td><td>81%</td></tr><tr><td>Science</td><td>58.2%</td><td>74%</td></tr></tbody></table></div>
 </div>
-<div class="card"><div class="card-header"><span class="card-title">Risk distribution</span></div><div style="padding:18px;display:flex;gap:24px;align-items:center"><div style="display:flex;gap:8px;align-items:flex-end"><div style="text-align:center"><div style="width:48px;height:38px;background:#FCEBEB;border:1px solid #F7C1C1;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#A32D2D">5</div><div style="font-size:10px;color:#999;margin-top:4px">Critical</div></div><div style="text-align:center"><div style="width:48px;height:56px;background:#FAEEDA;border:1px solid #FAC775;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#854F0B">18</div><div style="font-size:10px;color:#999;margin-top:4px">High</div></div><div style="text-align:center"><div style="width:48px;height:70px;background:#EAF3DE;border:1px solid #C0DD97;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#3B6D11">34</div><div style="font-size:10px;color:#999;margin-top:4px">Medium</div></div><div style="text-align:center"><div style="width:48px;height:90px;background:#EEEDFE;border:1px solid #AFA9EC;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#534AB7">143</div><div style="font-size:10px;color:#999;margin-top:4px">Low</div></div></div><div style="font-size:13px;color:#555;line-height:1.7;flex:1;padding-left:8px"><strong>23 students (11.5%)</strong> need attention. Risk scores recomputed nightly using 47 features across attendance, marks and trend data.</div></div></div>
+<div class="card"><div class="card-header"><span class="card-title">Risk distribution</span></div><div style="padding:18px;display:flex;gap:24px;align-items:center">
+<div style="display:flex;gap:8px;align-items:flex-end">
+<div style="text-align:center"><div style="width:48px;height:38px;background:#FCEBEB;border:1px solid #F7C1C1;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#A32D2D">5</div><div style="font-size:10px;color:#999;margin-top:4px">Critical</div></div>
+<div style="text-align:center"><div style="width:48px;height:56px;background:#FAEEDA;border:1px solid #FAC775;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#854F0B">18</div><div style="font-size:10px;color:#999;margin-top:4px">High</div></div>
+<div style="text-align:center"><div style="width:48px;height:70px;background:#EAF3DE;border:1px solid #C0DD97;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#3B6D11">34</div><div style="font-size:10px;color:#999;margin-top:4px">Medium</div></div>
+<div style="text-align:center"><div style="width:48px;height:90px;background:#EEEDFE;border:1px solid #AFA9EC;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#534AB7">143</div><div style="font-size:10px;color:#999;margin-top:4px">Low</div></div>
+</div>
+<div style="font-size:13px;color:#555;line-height:1.7;flex:1;padding-left:8px"><strong>23 students (11.5%)</strong> need attention. Risk scores recomputed nightly using 47 features.</div>
+</div></div>
 </div>
 <div id="p-notifications" class="page">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-size:13px;color:#999">4 unread alerts</div><button class="btn" style="font-size:12px;padding:5px 12px" onclick="markRead()">Mark all as read</button></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-size:13px;color:#999">4 unread alerts</div><button class="btn" style="font-size:12px;padding:5px 12px" id="btn-mark-read">Mark all as read</button></div>
 <div class="card" id="notif-container"></div>
 </div>
 </div></div></div>
 <div class="toast-wrap" id="toast-wrap"></div>
 <script>
-const STUDENTS=[{code:'STU-2024-0012',name:'Priya Sharma',sec:'10-A',att:58,avg:31,risk:'CRITICAL'},{code:'STU-2024-0034',name:'Arjun Mehta',sec:'10-B',att:72,avg:44,risk:'HIGH'},{code:'STU-2024-0071',name:'Sneha Patel',sec:'9-C',att:69,avg:48,risk:'HIGH'},{code:'STU-2024-0103',name:'Rohan Gupta',sec:'11-A',att:81,avg:55,risk:'MEDIUM'},{code:'STU-2024-0055',name:'Kavya Nair',sec:'9-A',att:83,avg:58,risk:'MEDIUM'},{code:'STU-2024-0089',name:'Ananya Roy',sec:'10-A',att:96,avg:91,risk:'LOW'},{code:'STU-2024-0142',name:'Vishal Verma',sec:'9-B',att:91,avg:78,risk:'LOW'},{code:'STU-2024-0028',name:'Ishaan Das',sec:'11-B',att:88,avg:72,risk:'LOW'},{code:'STU-2024-0067',name:'Pooja Sharma',sec:'10-B',att:77,avg:62,risk:'LOW'},{code:'STU-2024-0119',name:'Rahul Sinha',sec:'9-C',att:74,avg:59,risk:'MEDIUM'}];
-const MARKS=[{name:'Ananya Roy',code:'0089',score:47,bg:'#EEEDFE',tc:'#534AB7'},{name:'Aryan Shah',code:'0091',score:38,bg:'#EAF3DE',tc:'#3B6D11'},{name:'Priya Sharma',code:'0012',score:15,bg:'#FCEBEB',tc:'#A32D2D'},{name:'Karan Patel',code:'0094',score:42,bg:'#EAF3DE',tc:'#3B6D11'},{name:'Divya Reddy',code:'0096',score:null,bg:'#FAEEDA',tc:'#854F0B'}];
-const ATT=[{roll:'01',name:'Ananya Roy',status:'PRESENT'},{roll:'02',name:'Aryan Shah',status:'PRESENT'},{roll:'03',name:'Priya Sharma',status:'ABSENT'},{roll:'04',name:'Karan Patel',status:'PRESENT'},{roll:'05',name:'Divya Reddy',status:'LATE'},{roll:'06',name:'Mohit Jain',status:'PRESENT'},{roll:'07',name:'Shreya Singh',status:'PRESENT'}];
-const NOTIFS=[{icon:'ti-alert-triangle',bg:'#FCEBEB',ic:'#A32D2D',title:'Critical risk: Priya Sharma',desc:'Attendance 58%, marks avg 31%. Immediate teacher follow-up recommended.',time:'2 hours ago',unread:true},{icon:'ti-chart-bar-off',bg:'#FAEEDA',ic:'#854F0B',title:'Marks entry deadline approaching',desc:'Science &mdash; Class 10-B: only 30/40 entries. Deadline in 2 days.',time:'4 hours ago',unread:true},{icon:'ti-trending-up',bg:'#EAF3DE',ic:'#3B6D11',title:'Improvement: Rohan Gupta',desc:'Maths score improved from 34% to 61% between Unit Test 1 and 2.',time:'Yesterday',unread:true},{icon:'ti-users',bg:'#EEEDFE',ic:'#534AB7',title:'New teacher joined',desc:'Mr. Rajesh Kumar (Science, 10-B) accepted the invitation.',time:'2 days ago',unread:true},{icon:'ti-check',bg:'#EAF3DE',ic:'#3B6D11',title:'Marks verified: English 9-A',desc:"Mrs. Singh's marks for English 9-A verified by the HOD.",time:'3 days ago',unread:false}];
-const BARS=[{lbl:'10-A',v:82},{lbl:'10-B',v:59},{lbl:'9-A',v:71},{lbl:'9-B',v:68},{lbl:'9-C',v:64},{lbl:'11-A',v:85},{lbl:'11-B',v:77}];
-let riskFilter='all';
-const titles={dashboard:'Dashboard',students:'Students',marks:'Marks entry',attendance:'Attendance',analytics:'Analytics',notifications:'Alerts'};
-function go(name,el){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));document.getElementById('p-'+name).classList.add('active');if(el)el.classList.add('active');document.getElementById('ph').textContent=titles[name]||name;}
-function setRisk(r,el){riskFilter=r;document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');renderStu('');}
-function filterStu(q){renderStu(q);}
-function renderStu(q=''){const list=STUDENTS.filter(s=>{if(riskFilter!=='all'&&s.risk!==riskFilter)return false;if(q&&!s.name.toLowerCase().includes(q.toLowerCase())&&!s.code.includes(q))return false;return true;});document.getElementById('stu-body').innerHTML=list.map(s=>'<tr><td style="font-family:monospace;font-size:11px;color:#999">'+s.code+'</td><td><strong>'+s.name+'</strong></td><td>'+s.sec+'</td><td>'+s.att+'%</td><td>'+s.avg+'%</td><td><span class="risk-badge r-'+s.risk+'">'+s.risk[0]+s.risk.slice(1).toLowerCase()+'</span></td><td><button class="btn" style="font-size:12px;padding:3px 9px" onclick="toast('Opening profile…')">View</button></td></tr>').join('');}
-function grade(v){return v>=45?'A1':v>=40?'A2':v>=35?'B1':v>=30?'B2':isNaN(v)||v==null?'—':'C1';}
-function gc(v){return v>=40?['#EAF3DE','#3B6D11']:v>=30?['#FAEEDA','#854F0B']:isNaN(v)||v==null?['#f5f4f0','#999']:['#FCEBEB','#A32D2D'];}
-function buildMarks(){document.getElementById('marks-list').innerHTML=MARKS.map((s,i)=>{const g=grade(s.score),c=gc(s.score);return '<div class="marks-row"><div class="m-avatar" style="background:'+s.bg+';color:'+s.tc+'">'+s.name.split(' ').map(n=>n[0]).join('')+'</div><div style="flex:1;font-size:13px;font-weight:500">'+s.name+'</div><div style="font-size:11px;color:#999;width:80px">STU-'+s.code+'</div><input class="score-inp" type="number" min="0" max="50" value="'+(s.score??'')+'" placeholder="—" oninput="upGrade(this,'+i+')"><span class="grade-pill" id="gp-'+i+'" style="background:'+c[0]+';color:'+c[1]+'">'+g+'</span><span style="font-size:11px;color:#999;width:28px">/50</span></div>';}).join('');}
-function upGrade(inp,i){const v=parseFloat(inp.value),g=grade(v),c=gc(v);const el=document.getElementById('gp-'+i);el.textContent=g;el.style.background=c[0];el.style.color=c[1];}
-function buildAtt(){const sc={PRESENT:['#EAF3DE','#3B6D11'],ABSENT:['#FCEBEB','#A32D2D'],LATE:['#FAEEDA','#854F0B']};document.getElementById('att-body').innerHTML=ATT.map(s=>{const c=sc[s.status];return '<tr><td style="color:#999;font-size:12px">'+s.roll+'</td><td><strong>'+s.name+'</strong></td><td><select class="att-select" style="background:'+c[0]+';color:'+c[1]+';border-color:'+c[1]+'60;font-weight:600" onchange="this.style.background=({PRESENT:'#EAF3DE',ABSENT:'#FCEBEB',LATE:'#FAEEDA'})[this.value];this.style.color=({PRESENT:'#3B6D11',ABSENT:'#A32D2D',LATE:'#854F0B'})[this.value]"><option'+(s.status==='PRESENT'?' selected':'')+'>PRESENT</option><option'+(s.status==='ABSENT'?' selected':'')+'>ABSENT</option><option'+(s.status==='LATE'?' selected':'')+'>LATE</option></select></td><td><input style="border:1px solid #e8e7e3;border-radius:7px;padding:5px 10px;font-size:12px;font-family:inherit;width:180px" placeholder="Optional remark…"></td></tr>';}).join('');}
-function buildBars(){const max=Math.max(...BARS.map(b=>b.v));document.getElementById('bar-chart').innerHTML=BARS.map(b=>'<div class="bar-col"><div style="font-size:10px;color:#999;margin-bottom:3px">'+b.v+'%</div><div class="bar-fill" style="height:'+Math.round((b.v/max)*80)+'px"></div><div class="bar-lbl">'+b.lbl+'</div></div>').join('');}
-function buildNotifs(){document.getElementById('notif-container').innerHTML=NOTIFS.map(n=>'<div class="notif-item'+(n.unread?' unread':'')+'"><div class="notif-icon" style="background:'+n.bg+'"><i class="ti '+n.icon+'" style="color:'+n.ic+'"></i></div><div style="flex:1"><div class="notif-title">'+n.title+'</div><div class="notif-desc">'+n.desc+'</div><div class="notif-time">'+n.time+'</div></div>'+(n.unread?'<div class="unread-dot"></div>':'')+'</div>').join('');}
-function markRead(){document.querySelectorAll('.unread-dot').forEach(d=>d.remove());document.querySelectorAll('.notif-item.unread').forEach(n=>n.classList.remove('unread'));document.getElementById('badge').style.display='none';toast('All alerts marked as read');}
-function toast(msg){const wrap=document.getElementById('toast-wrap');const el=document.createElement('div');el.className='toast';el.innerHTML='<i class="ti ti-check" style="font-size:15px"></i>'+msg;wrap.appendChild(el);setTimeout(()=>el.remove(),2800);}
+var S=[{code:'STU-2024-0012',name:'Priya Sharma',sec:'10-A',att:58,avg:31,risk:'CRITICAL'},{code:'STU-2024-0034',name:'Arjun Mehta',sec:'10-B',att:72,avg:44,risk:'HIGH'},{code:'STU-2024-0071',name:'Sneha Patel',sec:'9-C',att:69,avg:48,risk:'HIGH'},{code:'STU-2024-0103',name:'Rohan Gupta',sec:'11-A',att:81,avg:55,risk:'MEDIUM'},{code:'STU-2024-0055',name:'Kavya Nair',sec:'9-A',att:83,avg:58,risk:'MEDIUM'},{code:'STU-2024-0089',name:'Ananya Roy',sec:'10-A',att:96,avg:91,risk:'LOW'},{code:'STU-2024-0142',name:'Vishal Verma',sec:'9-B',att:91,avg:78,risk:'LOW'},{code:'STU-2024-0028',name:'Ishaan Das',sec:'11-B',att:88,avg:72,risk:'LOW'},{code:'STU-2024-0067',name:'Pooja Sharma',sec:'10-B',att:77,avg:62,risk:'LOW'},{code:'STU-2024-0119',name:'Rahul Sinha',sec:'9-C',att:74,avg:59,risk:'MEDIUM'}];
+var M=[{name:'Ananya Roy',code:'0089',score:47,bg:'#EEEDFE',tc:'#534AB7'},{name:'Aryan Shah',code:'0091',score:38,bg:'#EAF3DE',tc:'#3B6D11'},{name:'Priya Sharma',code:'0012',score:15,bg:'#FCEBEB',tc:'#A32D2D'},{name:'Karan Patel',code:'0094',score:42,bg:'#EAF3DE',tc:'#3B6D11'},{name:'Divya Reddy',code:'0096',score:null,bg:'#FAEEDA',tc:'#854F0B'}];
+var A=[{roll:'01',name:'Ananya Roy',s:'PRESENT'},{roll:'02',name:'Aryan Shah',s:'PRESENT'},{roll:'03',name:'Priya Sharma',s:'ABSENT'},{roll:'04',name:'Karan Patel',s:'PRESENT'},{roll:'05',name:'Divya Reddy',s:'LATE'},{roll:'06',name:'Mohit Jain',s:'PRESENT'},{roll:'07',name:'Shreya Singh',s:'PRESENT'}];
+var N=[{icon:'ti-alert-triangle',bg:'#FCEBEB',ic:'#A32D2D',title:'Critical risk: Priya Sharma',desc:'Attendance 58%, marks avg 31%. Immediate teacher follow-up recommended.',time:'2 hours ago',u:true},{icon:'ti-chart-bar-off',bg:'#FAEEDA',ic:'#854F0B',title:'Marks entry deadline approaching',desc:'Science - Class 10-B: only 30/40 entries. Deadline in 2 days.',time:'4 hours ago',u:true},{icon:'ti-trending-up',bg:'#EAF3DE',ic:'#3B6D11',title:'Improvement: Rohan Gupta',desc:'Maths score improved from 34% to 61% between Unit Test 1 and 2.',time:'Yesterday',u:true},{icon:'ti-users',bg:'#EEEDFE',ic:'#534AB7',title:'New teacher joined',desc:'Mr. Rajesh Kumar (Science, 10-B) accepted the invitation.',time:'2 days ago',u:true},{icon:'ti-check',bg:'#EAF3DE',ic:'#3B6D11',title:'Marks verified: English 9-A',desc:'Mrs. Singh marks for English 9-A verified by the HOD.',time:'3 days ago',u:false}];
+var B=[{l:'10-A',v:82},{l:'10-B',v:59},{l:'9-A',v:71},{l:'9-B',v:68},{l:'9-C',v:64},{l:'11-A',v:85},{l:'11-B',v:77}];
+var T={dashboard:'Dashboard',students:'Students',marks:'Marks entry',attendance:'Attendance',analytics:'Analytics',notifications:'Alerts'};
+var rf='all';
+
+function go(name){
+  var ps=document.querySelectorAll('.page');
+  for(var i=0;i<ps.length;i++)ps[i].classList.remove('active');
+  var ns=document.querySelectorAll('.nav-item');
+  for(var i=0;i<ns.length;i++)ns[i].classList.remove('active');
+  var p=document.getElementById('p-'+name);
+  if(p)p.classList.add('active');
+  var n=document.querySelector('[data-page="'+name+'"]');
+  if(n)n.classList.add('active');
+  document.getElementById('ph').textContent=T[name]||name;
+}
+
+function toast(msg){
+  var w=document.getElementById('toast-wrap');
+  var e=document.createElement('div');
+  e.className='toast';
+  e.innerHTML='<i class="ti ti-check" style="font-size:15px"></i>'+msg;
+  w.appendChild(e);
+  setTimeout(function(){if(e.parentNode)e.parentNode.removeChild(e);},2800);
+}
+
+function gr(v){if(v===null||isNaN(v))return '--';return v>=45?'A1':v>=40?'A2':v>=35?'B1':v>=30?'B2':'C1';}
+function gc(v){if(v===null||isNaN(v))return['#f5f4f0','#999'];return v>=40?['#EAF3DE','#3B6D11']:v>=30?['#FAEEDA','#854F0B']:['#FCEBEB','#A32D2D'];}
+
+function renderStu(q){
+  q=q||'';
+  var list=S.filter(function(s){
+    if(rf!=='all'&&s.risk!==rf)return false;
+    if(q&&s.name.toLowerCase().indexOf(q.toLowerCase())===-1&&s.code.indexOf(q)===-1)return false;
+    return true;
+  });
+  var h='';
+  for(var i=0;i<list.length;i++){
+    var s=list[i];
+    h+='<tr><td style="font-family:monospace;font-size:11px;color:#999">'+s.code+'</td><td><strong>'+s.name+'</strong></td><td>'+s.sec+'</td><td>'+s.att+'%</td><td>'+s.avg+'%</td><td><span class="risk-badge r-'+s.risk+'">'+s.risk[0]+s.risk.slice(1).toLowerCase()+'</span></td><td><button class="btn" style="font-size:12px;padding:3px 9px" onclick="toast('Opening profile...')">View</button></td></tr>';
+  }
+  document.getElementById('stu-body').innerHTML=h;
+}
+
+function buildMarks(){
+  var h='';
+  for(var i=0;i<M.length;i++){
+    var s=M[i];var g=gr(s.score);var c=gc(s.score);
+    var ini=s.name.split(' ').map(function(n){return n[0];}).join('');
+    h+='<div class="marks-row"><div class="m-avatar" style="background:'+s.bg+';color:'+s.tc+'">'+ini+'</div><div style="flex:1;font-size:13px;font-weight:500">'+s.name+'</div><div style="font-size:11px;color:#999;width:80px">STU-'+s.code+'</div><input class="score-inp" type="number" min="0" max="50" value="'+(s.score!==null?s.score:'')+'" placeholder="--" data-idx="'+i+'"><span class="grade-pill" id="gp-'+i+'" style="background:'+c[0]+';color:'+c[1]+'">'+g+'</span><span style="font-size:11px;color:#999;width:28px">/50</span></div>';
+  }
+  document.getElementById('marks-list').innerHTML=h;
+  document.getElementById('marks-list').addEventListener('input',function(e){
+    if(e.target.classList.contains('score-inp')){
+      var idx=parseInt(e.target.getAttribute('data-idx'));
+      var v=parseFloat(e.target.value);
+      var g=gr(v);var c=gc(v);
+      var el=document.getElementById('gp-'+idx);
+      el.textContent=g;el.style.background=c[0];el.style.color=c[1];
+    }
+  });
+}
+
+function buildAtt(){
+  var sc={PRESENT:['#EAF3DE','#3B6D11'],ABSENT:['#FCEBEB','#A32D2D'],LATE:['#FAEEDA','#854F0B']};
+  var h='';
+  for(var i=0;i<A.length;i++){
+    var s=A[i];var c=sc[s.s];
+    h+='<tr><td style="color:#999;font-size:12px">'+s.roll+'</td><td><strong>'+s.name+'</strong></td><td><select class="att-select" style="background:'+c[0]+';color:'+c[1]+';border-color:'+c[1]+'60;font-weight:600"><option'+(s.s==='PRESENT'?' selected':'')+'>PRESENT</option><option'+(s.s==='ABSENT'?' selected':'')+'>ABSENT</option><option'+(s.s==='LATE'?' selected':'')+'>LATE</option></select></td><td><input style="border:1px solid #e8e7e3;border-radius:7px;padding:5px 10px;font-size:12px;font-family:inherit;width:180px" placeholder="Optional remark..."></td></tr>';
+  }
+  document.getElementById('att-body').innerHTML=h;
+  document.getElementById('att-body').addEventListener('change',function(e){
+    if(e.target.classList.contains('att-select')){
+      var m={PRESENT:['#EAF3DE','#3B6D11'],ABSENT:['#FCEBEB','#A32D2D'],LATE:['#FAEEDA','#854F0B']};
+      var c=m[e.target.value]||['#fff','#333'];
+      e.target.style.background=c[0];e.target.style.color=c[1];
+    }
+  });
+}
+
+function buildBars(){
+  var max=0;
+  for(var i=0;i<B.length;i++)if(B[i].v>max)max=B[i].v;
+  var h='';
+  for(var i=0;i<B.length;i++){
+    var ht=Math.round((B[i].v/max)*80);
+    h+='<div class="bar-col"><div style="font-size:10px;color:#999;margin-bottom:3px">'+B[i].v+'%</div><div class="bar-fill" style="height:'+ht+'px"></div><div class="bar-lbl">'+B[i].l+'</div></div>';
+  }
+  document.getElementById('bar-chart').innerHTML=h;
+}
+
+function buildNotifs(){
+  var h='';
+  for(var i=0;i<N.length;i++){
+    var n=N[i];
+    h+='<div class="notif-item'+(n.u?' unread':'')+'"><div class="notif-icon" style="background:'+n.bg+'"><i class="ti '+n.icon+'" style="color:'+n.ic+'"></i></div><div style="flex:1"><div class="notif-title">'+n.title+'</div><div class="notif-desc">'+n.desc+'</div><div class="notif-time">'+n.time+'</div></div>'+(n.u?'<div class="unread-dot"></div>':'')+'</div>';
+  }
+  document.getElementById('notif-container').innerHTML=h;
+}
+
+// Wire up sidebar clicks using event delegation
+document.getElementById('snav').addEventListener('click',function(e){
+  var item=e.target.closest('.nav-item');
+  if(item)go(item.getAttribute('data-page'));
+});
+
+// Filter chips
+document.querySelector('.filter-row').addEventListener('click',function(e){
+  var chip=e.target.closest('.chip');
+  if(chip){
+    var chips=document.querySelectorAll('.chip');
+    for(var i=0;i<chips.length;i++)chips[i].classList.remove('active');
+    chip.classList.add('active');
+    rf=chip.getAttribute('data-risk');
+    renderStu(document.getElementById('search-input').value);
+  }
+});
+
+document.getElementById('search-input').addEventListener('input',function(e){renderStu(e.target.value);});
+document.getElementById('btn-refresh').addEventListener('click',function(){toast('Data refreshed!');});
+document.getElementById('btn-report').addEventListener('click',function(){toast('Report queued - you will be notified when ready.');});
+document.getElementById('btn-view-all').addEventListener('click',function(){go('students');});
+document.getElementById('btn-save-draft').addEventListener('click',function(){toast('Draft saved!');});
+document.getElementById('btn-submit-marks').addEventListener('click',function(){toast('Submitted for HOD review');});
+document.getElementById('btn-submit-att').addEventListener('click',function(){toast('Attendance saved for Class 10-A');});
+document.getElementById('btn-mark-read').addEventListener('click',function(){
+  var dots=document.querySelectorAll('.unread-dot');
+  for(var i=0;i<dots.length;i++)dots[i].parentNode.removeChild(dots[i]);
+  var unreads=document.querySelectorAll('.notif-item.unread');
+  for(var i=0;i<unreads.length;i++)unreads[i].classList.remove('unread');
+  document.getElementById('badge').style.display='none';
+  toast('All alerts marked as read');
+});
+
 document.getElementById('att-date').value=new Date().toISOString().split('T')[0];
 renderStu();buildMarks();buildAtt();buildBars();buildNotifs();
 </script>
-</body></html>
+</body>
+</html>
